@@ -1,0 +1,38 @@
+[
+  {
+    "id": "qa_001",
+    "question": "What is the computational complexity of standard self-attention with respect to sequence length?",
+    "expected_sources": ["attention_mechanisms.md"],
+    "expected_keywords": ["quadratic", "O(n^2)", "sequence length"]
+  },
+  {
+    "id": "qa_002",
+    "question": "Why is the scaling factor 1 / sqrt(d_k) used in scaled dot-product attention?",
+    "expected_sources": ["attention_mechanisms.md"],
+    "expected_keywords": ["scaling factor", "dot product", "softmax", "gradient"]
+  },
+  {
+    "id": "qa_003",
+    "question": "How does Reciprocal Rank Fusion combine dense and sparse search rankings?",
+    "expected_sources": ["retrieval_augmented_generation.md"],
+    "expected_keywords": ["Reciprocal Rank Fusion", "RRF", "smoothing constant", "k=60"]
+  },
+  {
+    "id": "qa_004",
+    "question": "What advantages does a two-stage retrieval with cross-encoder reranking provide?",
+    "expected_sources": ["retrieval_augmented_generation.md"],
+    "expected_keywords": ["cross-encoder", "reranking", "groundedness", "candidates"]
+  },
+  {
+    "id": "qa_005",
+    "question": "What speedup does Grover's algorithm provide for searching an unsorted database?",
+    "expected_sources": ["quantum_computing_algorithms.md"],
+    "expected_keywords": ["Grover", "quadratic", "sqrt(N)", "amplitude amplification"]
+  },
+  {
+    "id": "qa_006",
+    "question": "What are the primary physical hardware limitations in the NISQ era?",
+    "expected_sources": ["quantum_computing_algorithms.md"],
+    "expected_keywords": ["NISQ", "coherence", "T_1", "gate fidelities"]
+  }
+]

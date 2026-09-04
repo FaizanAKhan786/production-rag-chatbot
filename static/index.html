@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Research Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>📚 RAG Research Assistant</h1>
+            <div class="status" id="status">Ready</div>
+        </header>
+        
+        <main class="chat-area" id="chatArea">
+            <div class="welcome-message">
+                <h2>Welcome!</h2>
+                <p>Ask questions about the indexed research papers. I'll find relevant passages and cite my sources.</p>
+            </div>
+        </main>
+        
+        <footer class="input-area">
+            <div class="input-wrapper">
+                <textarea 
+                    id="queryInput" 
+                    placeholder="Ask a question about your documents..."
+                    rows="1"
+                    maxlength="1000"
+                ></textarea>
+                <button id="sendBtn" title="Send (Enter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-hint">Enter to send · Shift+Enter for newline</div>
+        </footer>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+services:
+  rag-chatbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag-chatbot-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=qwen2.5:14b
+      - EMBEDDING_MODEL=BAAI/bge-large-en-v1.5
+      - EMBEDDING_DEVICE=cpu
+      - RERANKER_MODEL=BAAI/bge-reranker-v2-m3
+      - RERANKER_DEVICE=cpu
+      - CHROMA_PERSIST_DIR=/app/data/chroma_db
+      - CORPUS_DIR=/app/data/corpus
+      - LOG_LEVEL=INFO
+      - LOG_FORMAT=json
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: rag-ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    # GPU support (uncomment if NVIDIA Container Toolkit is installed)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  ollama_models:

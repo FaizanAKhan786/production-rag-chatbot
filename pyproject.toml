@@ -1,0 +1,40 @@
+[project]
+name = "rag-chatbot"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.135.0",
+    "uvicorn[standard]",
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "chromadb",
+    "rank-bm25",
+    "sentence-transformers",
+    "pymupdf4llm",
+    "langchain-text-splitters",
+    "ollama",
+    "httpx",
+    "structlog",
+    "python-dotenv",
+    "numpy"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "httpx"
+]
+
+[project.scripts]
+ingest = "scripts.ingest:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
