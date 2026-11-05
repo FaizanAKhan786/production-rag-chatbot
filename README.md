@@ -1,4 +1,7 @@
 <div align="center">
+  <a href="https://github.com/FaizanAKhan786/production-rag-chatbot"><img src="docs/project-showcase.svg" alt="production-rag-chatbot conceptual AI system architecture artwork" width="100%" /></a>
+  <br />
+
 
 # Production RAG Chatbot
 ### Hybrid retrieval and locally served answers
