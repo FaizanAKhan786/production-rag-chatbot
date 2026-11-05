@@ -97,4 +97,8 @@ The evaluation and retrieval utilities are in [`src/eval/`](src/eval/) and [`scr
 
 The project is intended for **self-hosted experimentation and engineering demonstration**. Adding documents does not guarantee accurate answers; inspect citations and evaluate retrieval quality for your use case. Avoid uploading sensitive documents to an unreviewed environment.
 
+## Verification & benchmark protocol
+
+[Read the reproducible test and evaluation guide](docs/QUALITY.md). It documents the current automated checks, commands for model-dependent evaluations, and what results **do not** establish.
+
 [Issues](https://github.com/FaizanAKhan786/production-rag-chatbot/issues) · [GitHub profile](https://github.com/FaizanAKhan786)
